@@ -15,10 +15,14 @@ This is a Raycast-format extension. It runs in any launcher that can run Raycast
 
 SilverBullet's own `Library/` pages are left out.
 
+### Send to Duet
+
+A second command, **Send to Duet**, saves a quick note to your space. Type the note and press ⌘Enter. It becomes a new page named like SilverBullet's own Quick Note (Ctrl-q Ctrl-q), for example `Inbox/2026-11-24/14-05-09`, so both kinds of notes land in the same inbox. It only ever creates new pages and never overwrites or changes an existing one. If sending fails, your note stays in the form so you can try again.
+
 ## What you need
 
 - A SilverBullet server reachable from your Mac.
-- An API token for a user who can read the space you want to search. If your server has several users, a user with read-only access to that space is enough. Don't use an admin token.
+- An API token for a user who can read the space you want to search. If you only search, a user with read-only access to that space is enough; to use Send to Duet, the user must be able to write to it. Don't use an admin token.
 
 ## Install
 
@@ -49,6 +53,8 @@ The first time you run **Search Wiki**, it asks for:
 - **Space URL** — the address of the space, including the space's path, for example `https://wiki.example.com/notes`. For a server with a single space, it's just the server's address.
 - **API Token** — the token described above. It is kept in the macOS keychain.
 - **Max Results** (optional) — how many results to show; 30 by default.
+
+**Send to Duet** uses the same Space URL and API Token. For it to work, the token must belong to a user who can *write* to the space; with a read-only token, searching works but sending a note is turned down.
 
 If the extension says the wiki turned down the token, check that you pasted SilverBullet's API token and not some other key. You can test a token in Terminal; `200` means it works:
 

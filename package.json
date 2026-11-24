@@ -1,9 +1,9 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "silverbullet-search",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "title": "SilverBullet Search",
-  "description": "Search the pages of a SilverBullet wiki space from Raycast",
+  "description": "Search the pages of a SilverBullet wiki space, and send quick notes to it",
   "icon": "extension-icon.png",
   "author": "kerim",
   "categories": [
@@ -16,6 +16,12 @@
       "name": "search-wiki",
       "title": "Search Wiki",
       "description": "Search page titles and text in your SilverBullet wiki",
+      "mode": "view"
+    },
+    {
+      "name": "send-to-duet",
+      "title": "Send to Duet",
+      "description": "Save a typed note as a new quick-note page in your SilverBullet space",
       "mode": "view"
     }
   ],
@@ -31,7 +37,7 @@
     {
       "name": "token",
       "title": "API Token",
-      "description": "A SilverBullet API token with read access to this space",
+      "description": "A SilverBullet API token for this space. Searching only needs read access; Send to Duet needs write access",
       "type": "password",
       "required": true
     },
