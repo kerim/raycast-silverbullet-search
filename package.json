@@ -1,0 +1,65 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "silverbullet-search",
+  "version": "1.0.0",
+  "title": "SilverBullet Search",
+  "description": "Search the pages of a SilverBullet wiki space from Raycast",
+  "icon": "extension-icon.png",
+  "author": "kerim",
+  "categories": [
+    "Productivity",
+    "Data"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search-wiki",
+      "title": "Search Wiki",
+      "description": "Search page titles and text in your SilverBullet wiki",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "spaceUrl",
+      "title": "Space URL",
+      "description": "Address of the SilverBullet space, including the space path",
+      "type": "textfield",
+      "required": true,
+      "placeholder": "https://wiki.example.com/space"
+    },
+    {
+      "name": "token",
+      "title": "API Token",
+      "description": "A SilverBullet API token with read access to this space",
+      "type": "password",
+      "required": true
+    },
+    {
+      "name": "maxResults",
+      "title": "Max Results",
+      "description": "Maximum number of results to show",
+      "type": "textfield",
+      "required": false,
+      "default": "30"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^2.12.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.2.0",
+    "@types/node": "22.13.10",
+    "@types/react": "^19.3.0",
+    "eslint": "^9.39.5",
+    "prettier": "^3.10.1",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
